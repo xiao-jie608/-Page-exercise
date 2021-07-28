@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .todo{
+            margin: 0 auto;
+            padding: 0 55px;
+            width: 600px;
+            background-color: #ddd;
+            overflow: hidden;
+        }
+        ul,li{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        h1{
+            text-align: center;
+            line-height: 1;
+        }
+        .todo>input{
+            height: 25px;
+            width: 500px;
+            font-size: 16px;
+            line-height: 25px;
+        }
+        .todo>button{
+            height: 30px;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        .remove , .edit{
+            display:none;
+            margin-right:20px;
+            float: right;
+            cursor: pointer;
+        }
+        
+        .cont li{
+            margin-top: 5px;
+            height: 30px;
+            line-height: 30px;
+            background-color: #bbb;
+        }
+        .cont li:hover .remove,.cont li:hover .edit{
+            display: block;
+            color: red;
+        }
+        .change{
+            /* position: relative; */
+            display:none;
+            width: 400px;
+            height: 22px;
+        }
+        .batch span {
+            cursor: pointer;
+        }
+        .batch span:first-child>*{
+            cursor: pointer;
+        }
+        .donelist li {
+            background-color: #bbb;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="todo">
+        <h1>待办任务列表</h1>
+        <input type="text" class="ipt">
+        <button class="add">添加</button>
+        <ul class="cont">
+            <!-- <li>
+                <input type="checkbox" >
+                <span class="conte"></span>
+                <input class="change" type="text" >
+                <span class="remove">删除</span>
+                <span class="edit">编辑</span>
+            </li> -->
+        </ul>
+        <div class="batch">
+            <span>
+                <input type="checkbox" class="all" id="all">
+                <label for="all">全选</label>
+            </span>
+            <span class="done">处理</span>
+            <span class="removes">删除</span>
+        </div>
+        <h1>已处理任务列表</h1>
+        <ul class="donelist">
+            <!-- <li>任务1</li> -->
+            <!-- <li>任务2</li> -->
+        </ul>
+    </div>
+    <script src="./jquery-3.6.0.js"></script>
+    <script src="./todo.js"></script>
+    <!-- <script src="./protoToDo.js"></script> -->
+</body>
+</html>
